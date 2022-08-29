@@ -3,17 +3,17 @@
 version: '3.4'
 
 services:
-  # travelapi:
-  #   image: travelapi
-  #   build:
-  #     context: .
-  #     dockerfile: ./Dockerfile
-  #   ports:
-  #     - 3030:5000
-  #   environment:
-  #     - ASPNETCORE_ENVIRONMENT=Development
-  #   volumes:
-  #     - ~/.vsdbg:/remote_debugger:rw
+  travelapi:
+    image: travelapi
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 3030:5000
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    volumes:
+      - ~/.vsdbg:/remote_debugger:rw
   db:
     image: postgres:14.1-alpine
     restart: always
