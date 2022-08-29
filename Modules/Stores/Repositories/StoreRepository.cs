@@ -1,9 +1,9 @@
 namespace travel_api.Module.Stores;
-public class StoreRepositoty
+public class StoreRepository
 {
 
     private readonly StoreContext _context;
-    public StoreRepositoty(StoreContext context)
+    public StoreRepository(StoreContext context)
     {
         _context = context;
     }

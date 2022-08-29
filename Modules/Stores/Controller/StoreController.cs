@@ -8,12 +8,12 @@ public class StoreController : ControllerBase
 {
 
     private readonly ILogger<StoreController> logger;
-    private readonly StoreRepositoty repositoty;
+    private readonly StoreRepository repositoty;
 
     public StoreController(ILogger<StoreController> logger)
     {
         this.logger = logger;
-        this.repositoty = new StoreRepositoty(new StoreContext());
+        this.repositoty = new StoreRepository(new StoreContext());
     }
 
     [HttpGet()]
@@ -29,5 +29,11 @@ public class StoreController : ControllerBase
     {
         var store = await repositoty.Add(dto);
         return StoreConverter.convertToResponse(store);
+    }
+
+    [HttpPost("{id}/product")]
+    public async void AddProductToStore()
+    {
+        throw new NotImplementedException();
     }
 }
